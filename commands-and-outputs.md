@@ -1,6 +1,8 @@
-| Commands | Outputs | Description |
-|---------|---------|--------------------------------------------------|
-| key     | value   | lists the value of a specific attribute from a server |
+| S.No | Commands | Outputs | Description |
+|---|---------|---------|--------------------------------------------------|
+| 1 | key     | value   | lists the value of a specific attribute from a server |
+|---|---------|---------|--------------------------------------------------|
+
 
 
 |||lists values of all attributes from all servers|
