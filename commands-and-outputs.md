@@ -1,6 +1,6 @@
 | S.No | Commands | Outputs | Description |
 |---|---------|---------|--------------------------------------------------|
-| 1 | key     | value   | lists the value of a specific attribute from a server |
+| 1 | itldims |    | lists the value of a specific attribute from a server |
 |---|---------|---------|--------------------------------------------------|
 
 
