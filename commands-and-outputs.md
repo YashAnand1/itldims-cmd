@@ -1,5 +1,5 @@
 |Commands|Outputs|Description|
-|||lists the value of a specific attribute from a server|
+|key|value|lists the value of a specific attribute from a server|
 |||lists values of all attributes from all servers|
 |||list values of specific servers (vms or physical)|
 |||list values of all servers for a specific attribute (list CPUs of all servers)|
