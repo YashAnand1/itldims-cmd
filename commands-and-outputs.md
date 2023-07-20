@@ -1,4 +1,4 @@
-| Commands | Outputs | Description                                      |
+| Commands | Outputs | Description |
 |---------|---------|--------------------------------------------------|
 | key     | value   | lists the value of a specific attribute from a server |
 
