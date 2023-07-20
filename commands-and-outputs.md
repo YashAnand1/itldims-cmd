@@ -1,52 +1,67 @@
-| S.No | Commands | Outputs | Description |
-|---|---------|---------|--------------------------------------------------|
-| 1 | itldims |    | lists the value of a specific attribute from a server |
-|---|---------|---------|--------------------------------------------------|
+keys are in the form of: </*servers*/*server-type*/*server-IP*/*attribute*>
 
+Possible commands for data retrieval
+1. list value of a specific attribute from a specific server
+input: itldims list <key>
+output: value of attribute displayed
 
+2. list values of all attributes from all servers
+input: itldims list --all
+output: values of all attributes of a all servers
 
-|||lists values of all attributes from all servers|
-|||list values of specific servers (vms or physical)|
-|||list values of all servers for a specific attribute (list CPUs of all servers)|
-|||list values of specific servers for a specific attribute (list LVM of specific servers|
-|||list servers with particular attributes (list servers running vahan)|
-|||list server to get its server type (in case admin wants to see what the server type is)|
-|||list all servers of a particular type|
-|||list values of servers without mentioning the servers (like print_value_only)|
-|||list values in ascending order|
-||list values in descending order|
-|||
-|||
-|||
-|||
-|||
+3. list values of all attributes from a specific server
+input: itldims list <key> --all
+output: values of all attributes of a server displayed
 
-- list value of a specific attribute from a specific server
+4. list values of servers without mentioning the servers (like print_value_only)
+input: itldims list <key> --no-val
+output: values of attribute displayed without 
 
-- list values of all attributes from all servers | 
+5. list values of attribute & sort by ascending
+input: itldims list <key> --sort-a
+output: values of all attributes of all servers displayed
 
-- list values of specific servers (vms or physical) | etcdctl get
+6. list values of attribute & sort by descending
+input: itldims list <key> --sort-d
+output: values sorted in descending order & displayed
 
-- list values of all servers for a specific attribute (list CPUs of all servers)
+7. list values of an attributes between a range (RAM between 8GB & 16GB) (show filtered data, only show filtered or searched content)
+input: itldims list <key> --range <min num> <max num>
+output: values between a range are displayed
 
-- list values of specific servers for a specific attribute (list LVM of specific servers 
+8. list the number of times a value of an attribute has been changed (versions)
+input: itldims list <key> --findrev
+output: revision number of current value displayed
 
-- list servers with particular attributes (list servers running vahan)
+9. list the value of an attribute from an earlier revision
+input: itldims list <key> --rev <revision number>
+output: old version of the value displayed
 
-- list server to get its server type (in case admin wants to see what the server type is)
+10. list the recently updated server in ascending order
+input: itldims list --sort-a --no-val
+output: recently updated servers are sorted in ascending order and displayed
 
-- list all servers of a particular 
+11. list the recently updated server in descending order
+input: itldims list --sort-d --no-val
+output: recently updated servers are sorted in descending order and displayed
 
-- list values of servers without mentioning the servers (like print_value_only)
+12. list which server has NONE (NFS & External_Partition can be optional)
+input: itldims list <key> --find NONE
+output: servers containing attribute values as NONE are only displayed
 
-- list values of servers & sort by
-- - ascending order
-- - descending order
+13. list servers with particular attributes (list servers running vahan) (like command 10)
+input: itldims list <key> --find <value>
+output: servers containing attribute values as NONE are only displayed
 
-- list values of a server between a range (RAM between 8GB & 16GB)
+14. list all servers of a particular server type 
+input: itldims list <key> --find <value>
+output: servers containing attribute values as NONE are only displayed
 
-- list the number of times a value of an attribute has been changed (versions)
+15. list values of multiple attributes in a server
+input: itldims list <key> <key> <key>
+output: values of multiple attributes displayed
 
-- get values of multiple attributes in a server
-
-- itldims --help
+16. 'itldims --help' or 'itldims' to provide usage of itldims
+input: itldims
+input: itldims --help 
+output: usage and options related to itldims displayed
