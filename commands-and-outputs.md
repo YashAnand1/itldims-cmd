@@ -1,6 +1,7 @@
 |Commands|Outputs|Description|
+------------------------------
 |key|value|lists the value of a specific attribute from a server|
--
+-----
 
 |||lists values of all attributes from all servers|
 |||list values of specific servers (vms or physical)|
