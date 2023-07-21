@@ -22,8 +22,8 @@ Possible commands for data retrieval in a tabular form are as follows:
 | 16. 'itldims --help' or 'itldims' to provide usage        | `itldims`                               | Usage and options related to itldims displayed    |
 
 The same comands which have been mentioned above have been provided below as well in a listed view:
-1. list value of a specific attribute from a specific server
-input: itldims list <key>
+1. list value of a specific attribute from a specific server<br>
+input: itldims list <key> <br>
 output: value of attribute displayed  
 
 4. list values of all attributes from all servers
