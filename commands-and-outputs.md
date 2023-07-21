@@ -23,8 +23,8 @@ Possible commands for data retrieval in a tabular form are as follows:
 
 The same comands which have been mentioned above have been provided below as well in a listed view:
 1. list value of a specific attribute from a specific server
-2. input: itldims list <key>
-3. output: value of attribute displayed  
+input: itldims list <key>
+output: value of attribute displayed  
 
 4. list values of all attributes from all servers
 input: itldims list --all
