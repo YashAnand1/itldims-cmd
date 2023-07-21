@@ -1,7 +1,7 @@
 keys are in the form of: </*servers*/*server-type*/*server-IP*/*attribute*>
 
 Possible commands for data retrieval
-1. list value of a specific attribute from a specific server
+list value of a specific attribute from a specific server
 input: itldims list <key>
 output: value of attribute displayed
 
