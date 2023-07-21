@@ -2,6 +2,7 @@ keys are in the form of: </*servers*/*server-type*/*server-IP*/*attribute*>
 
 
 <center>Possible commands for data retrieval</center>
+
 | Description                                                 | Input                                    | Output                                         |
 |----------------------------------------------------------|------------------------------------------|-------------------------------------------------|
 | 1. List value of a specific attribute from a specific server | `itldims list <key>`                      | Value of attribute displayed                   |
