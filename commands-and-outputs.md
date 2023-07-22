@@ -1,19 +1,24 @@
 keys are in the form of: </*servers*/*server-type*/*server-IP*/*attribute*>
 
-Possible commands for data retrieval in a tabular form are as follows:
-| Use cases                                                 | Input                                     | Output                                               |
-|-----------------------------------------------------------|------------------------------------------ |------------------------------------------------------|
-| 1. Find value of a **specific attribute from a server**   | `itldims get-a <server IP> <attribute>`   | Value of attribute displayed                         |
-| 2. Find **list of attributes running on server**          | `itldims get-a <server IP>`               | Values of all attributes of all servers displayed    |
-| 3. List **Server IPs containing specific attributes**     | `itldims get-s <attribute>`               | Values of all attributes of a server displayed       |
-| 4. Find **Server Types of attributes**                    | `itldims get-t <attribute>`               | Values of all attributes of a server displayed       |
-| 5.                                           |                                              |                                                                | 
+total connected ips? 
+change -s and -t flags.
 
 Possible commands for data retrieval in a tabular form are as follows:
-| Description                                                  | Input                                            | Output                                                     |
-|--------------------------------------------------------------|--------------------------------------------------|----------------------------------------------|
-| 1. List value of a specific attribute from a specific server | `itldims get <server IP> <attribute>`            | Value of attribute displayed                                         |
-| 2. List values of all attributes from all servers            | `itldims get --all`                              | Values of all attributes of all servers displayed                    |
+| Use cases                                                 | Input                                      | Output                                               |
+|-------------------------------------------------------------|------------------------------------------|-----------------------------------------------------|
+| 1. Find value of a **specific attribute from a Server IP**  | `itldims get -s <server IP> <attribute>` | Value of attribute displayed                        |
+| 1. Find value of a **specific attribute from a Server Type**| `itldims get -t <server IP> <attribute>` | Value of attribute displayed                        |
+| 2. Find **list of attributes running on server**            | `itldims get -s <server IP> --all`       | Values of all attributes of all servers displayed   |
+| 2. Find **list of attributes running on a server type**     | `itldims get -t <server type> --all`     | Values of all attributes of all servers displayed   |
+| 3. List **Server IPs containing specific attributes**       | `itldims get -s <attribute> --only`      | Values of all attributes of a server displayed      |
+| 4. Find **Server Types of attributes**                      | `itldims get -t <attribute> --only`      | Server Types containing given attribute displayed   |
+| 5. Find **The list of any attributes**                      |                                          |                                                     |
+
+Possible commands for data retrieval in a tabular form are as follows:
+| Description                                                  | Input                                          | Output                                       |
+|--------------------------------------------------------------|------------------------------------------------|----------------------------------------------|
+| 1. List value of a specific attribute from a specific server | `itldims get <server IP> <attribute>`          | Value of attribute displayed                 |
+| 2. List values of all attributes from all servers            | `itldims get --all`                            | Values of all attributes of all servers displayed                    |
 | 3. List values of all attributes from a server      | `itldims get <server IP>  --all`                 | Values of all attributes of a server displayed                       |
 | 4. List values of all atributes from a server without mentioning the value       | `itldims get <server IP> --no-val`               | Values of attribute displayed without server names                   |
 | 5. List values of attribute & sort by ascending              | `etcdctl get <key> --sort-a`                    | Values of all attributes of all servers displayed                    |
@@ -26,8 +31,8 @@ Possible commands for data retrieval in a tabular form are as follows:
 | 12. List which server has NONE                               | `etcdctl get <key> --find NONE`                 | Servers containing attribute values as NONE are only displayed       |
 | 13. List servers with particular attributes                  | `etcdctl get <key> --find <value>`              | Servers containing attribute values as the given value are displayed |
 | 14. List all servers of a particular server type             | `etcdctl get <key> --find <value>`              | Servers containing attribute values as the given value are displayed |
-| 15. List values of multiple attributes in a server           | `etcdctl get <key> <key> <key>`                 | Values of multiple attributes displayed                              |
-| 16. 'itldims --help' or 'itldims' to provide usage           | `etcdctl` or `etcdctl --help`                    | Usage and options related to itldims displayed                       |
+| 15. List values of multiple attributes in a server           | `etcdctl get <key> <key> <key>`                 | Values of multiple attributes displayed  |
+| 16. 'itldims --help' or 'itldims' to provide usage           | `etcdctl` or `etcdctl --help`                   | Usage and options related to itldims displayed|
 
 The same comands which have been mentioned above have been provided below as well in a listed view:
 1. list value of a specific attribute from a specific server<br>
