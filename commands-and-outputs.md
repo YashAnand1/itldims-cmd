@@ -2,7 +2,7 @@ keys are in the form of: </*servers*/*server-type*/*server-IP*/*attribute*>
 
 Possible commands for data retrieval in a tabular form are as follows:
 | Description                                                 | Input                                    | Output                                         |
-|----------------------------------------------------------|------------------------------------------|-------------------------------------------------|
+|-------------------------------------------------------------|------------------------------------------|-------------------------------------------------|
 | 1. List value of a specific attribute | `itldims get <server IP> <attribute>`                      | Value of attribute displayed                   |
 | 2. List values of all attributes from all servers         | `itldims get --all`                     | Values of all attributes of all servers displayed   |
 | 3. List values of all attributes from a specific server    | `itldims list <key> --all`                | Values of all attributes of a server displayed       |
