@@ -1,6 +1,8 @@
-keys are in the form of: </*servers*/*server-type*/*server-IP*/*attribute*>
-
+# Possible Commands For Data Retrieval
+___
+NOTE: keys are in the form of: </*servers*/*server-type*/*server-IP*/*attribute*>
 Commands that need to be added: date, time, recently updated.
+___
 
 Possible commands for data retrieval in a tabular form are as follows:
 | Use cases                                                 | Input                                      | Output                                              |
