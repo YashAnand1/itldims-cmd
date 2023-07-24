@@ -2,6 +2,7 @@
 ___
 NOTE: keys are in the form of: </*servers*/*server-type*/*server-IP*/*attribute*>
 Commands that need to be added: date, time, recently updated.
+
 ___
 
 Possible commands for data retrieval in a tabular form are as follows:
@@ -15,6 +16,8 @@ Possible commands for data retrieval in a tabular form are as follows:
 | 04. Find **Server Types containing specific attributes**     |`itldims get --st <attribute> --only`|Displays Server Type containing specfic attribute |
 | 05. Find **Number of stored Server IPs**                     |`itldims get --ip --count`           |Displays the number of Server IPs in the DB |
 
+___
+
 Other possible commands
 | Description                                                  | Input                                          | Output                                       |
 |--------------------------------------------------------------|------------------------------------------------|----------------------------------------------|
@@ -27,6 +30,8 @@ Other possible commands
 | 09. List which server has attribute has specific value        | `itldims get --aip <server IP> <attribute> --find "NONE"`               | Servers containing attribute values as NONE are only displayed       |
 | 10. List values of multiple attributes in a server           | `itldims get --aip <server IP> <attribute> <attribute> <attribute>`     | Values of multiple attributes displayed  |
 | 11. 'itldims --help' or 'itldims' to provide usage           | `itldims` or `etcdctl --help`                                           | Usage and options related to itldims displayed|
+
+___
 
 Possible flags for facillitating data retrieval
 | Description                                     |Input | Output                      |
