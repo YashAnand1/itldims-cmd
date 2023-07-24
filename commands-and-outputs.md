@@ -43,3 +43,4 @@ Possible flags for facillitating data retrieval
 |05. Helps display **Display all attributes**|`--all` |All attributes can be displayed|
 |06. Helps display **Display without values**|`--only`|Only values can be displayed|
 |07. Helps display **Display without values**|`--only`|Only values can be displayed|
+___
