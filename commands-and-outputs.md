@@ -6,13 +6,23 @@ change -s and -t flags.
 Possible commands for data retrieval in a tabular form are as follows:
 | Use cases                                                 | Input                                      | Output                                               |
 |-------------------------------------------------------------|------------------------------------------|-----------------------------------------------------|
-| 1. Find value of a **specific attribute from a Server IP**  | `itldims get -a <server IP> <attribute>` |                |
-| 1. Find value of a **specific attribute from a Server Type**| `itldims get -a <server IP> <attribute>` |                        |
-| 2. Find **list of attributes running on server**            | `itldims get -s <server IP> --all`       |    |
-| 2. Find **list of attributes running on a server type**     | `itldims get -t <server type> --all`     |    |
-| 3. List **Server IPs containing specific attributes**       | `itldims get -s <attribute> --only`      |      |
-| 4. Find **Server Types of attributes**                      | `itldims get -t <attribute> --only`      |    |
-| 5. Find **The list of any attributes**                      |                                          |                                                     |
+| 1. Find value of a **specific attribute from a Server IP**  | `itldims get -aip <server IP> <attribute>` |    |
+| 1. Find value of a **specific attribute from a Server Type**| `itldims get -ast <server Type> <attribute>` |    |
+| 2. Find **list of attributes running on server**            | `itldims get -aip <server IP> --all`       |    |
+| 2. Find **list of attributes running on a server type**     | `itldims get -ast <server type> --all`     |    |
+| 3. List **Server IPs containing specific attributes**       | `itldims get -ip <attribute> --only`      |    |
+| 4. Find **Server Types of attributes**                      | `itldims get -st <attribute> --only`      |    |
+| 5. Find **The list of any attributes**                      |                                          |    |
+
+| Flags      | Input                                      | Output                                               |
+|-------------------------------------------------------------|------------------------------------------|-----------------------------------------------------|
+| 1. Find value of a **attribute from Server IP**  | `-aip` |    |
+| 1. Find value of a **attribute from Server Type**| `-ast` |    |
+| 2. Find **Server IP from attribute**            | `-ip`       |    |
+| 2. Find **Server Type from attribute**     | `-st`     |    |
+| 3. List **Display all attributes**       | `--all`      |    |
+| 4. Find **Display without values**                      | `--only`      |    |
+
 
 Possible commands for data retrieval in a tabular form are as follows:
 | Description                                                  | Input                                          | Output                                       |
