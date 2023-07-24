@@ -6,8 +6,8 @@ change -s and -t flags.
 Possible commands for data retrieval in a tabular form are as follows:
 | Use cases                                                 | Input                                      | Output                                               |
 |-------------------------------------------------------------|------------------------------------------|-----------------------------------------------------|
-| 1. Find value of a **specific attribute from a Server IP**  | `itldims get -s <server IP> <attribute>` |                |
-| 1. Find value of a **specific attribute from a Server Type**| `itldims get -t <server IP> <attribute>` |                        |
+| 1. Find value of a **specific attribute from a Server IP**  | `itldims get -a <server IP> <attribute>` |                |
+| 1. Find value of a **specific attribute from a Server Type**| `itldims get -a <server IP> <attribute>` |                        |
 | 2. Find **list of attributes running on server**            | `itldims get -s <server IP> --all`       |    |
 | 2. Find **list of attributes running on a server type**     | `itldims get -t <server type> --all`     |    |
 | 3. List **Server IPs containing specific attributes**       | `itldims get -s <attribute> --only`      |      |
