@@ -17,6 +17,17 @@ Possible commands for data retrieval in a tabular form are as follows:
 | 05. Find **Number of stored Server IPs**                     |`itldims get --ip --count`           |Displays the number of Server IPs in the DB |
 
 ___
+Possible flags for facillitating data retrieval
+| Description                                     |Input | Output                      |
+|--------------------------------------------|----|------------------------------------|
+|01. Helps display value of a **attribute from Server IP**|`--aip`|Attributes from Server IP can be found|
+|02. Helps display value of a **attribute from Server Type**|`--ast`|Attribute from Server Type can be found|
+|03. Helps display **Server IP from attribute**|`--ip`|Server IP from Attribute can be found|
+|04. Helps display **Server Type from attribute**|`--st`|Server Type from Attribute can be found|
+|05. Helps display **Display all attributes**|`--all` |All attributes can be displayed|
+|06. Helps display **Display without values**|`--only`|Only values can be displayed|
+|07. Helps display **Display without values**|`--only`|Only values can be displayed|
+___
 
 Other possible commands
 | Description                                                  | Input                                          | Output                                       |
@@ -33,14 +44,4 @@ Other possible commands
 
 ___
 
-Possible flags for facillitating data retrieval
-| Description                                     |Input | Output                      |
-|--------------------------------------------|----|------------------------------------|
-|01. Helps display value of a **attribute from Server IP**|`--aip`|Attributes from Server IP can be found|
-|02. Helps display value of a **attribute from Server Type**|`--ast`|Attribute from Server Type can be found|
-|03. Helps display **Server IP from attribute**|`--ip`|Server IP from Attribute can be found|
-|04. Helps display **Server Type from attribute**|`--st`|Server Type from Attribute can be found|
-|05. Helps display **Display all attributes**|`--all` |All attributes can be displayed|
-|06. Helps display **Display without values**|`--only`|Only values can be displayed|
-|07. Helps display **Display without values**|`--only`|Only values can be displayed|
-___
+
