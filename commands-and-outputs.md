@@ -6,25 +6,26 @@ change -s and -t flags.
 Possible commands for data retrieval in a tabular form are as follows:
 | Use cases                                                 | Input                                      | Output                                               |
 |-------------------------------------------------------------|------------------------------------------|-----------------------------------------------------|
-| 1. Find value of a **specific attribute from a Server IP**  | `itldims get --aip <server IP> <attribute>` |    |
-| 1. Find value of a **specific attribute from a Server Type**| `itldims get --ast <server Type> <attribute>` |    |
-| 2. Find **list of attributes running on server**            | `itldims get --aip <server IP> --all`       |    |
-| 2. Find **list of attributes running on a server type**     | `itldims get --ast <server type> --all`     |    |
-| 3. List **Server IPs containing specific attributes**       | `itldims get --ip <attribute> --only`      |    |
-| 4. Find **Server Types containing specific attributes**     | `itldims get --st <attribute> --only`      |    |
-| 5. Find **Number of stored Server IPs**                     | `itldims get --ip --count`                                        |    |
+| 1. Find value of a **specific attribute from a Server IP**  |`itldims get --aip <server IP> <attribute>`|Displays values of an attribute from a server IP  |
+| 1. Find value of a **specific attribute from a Server Type**|`itldims get --ast <server Type> <attribute>`|Displays values of an attribute from a server Type |
+| 2. Find **list of attributes running from server IP**       |`itldims get --aip <server IP> --all`|Displays all the attributes using Server IP       |
+| 2. Find **list of attributes running from server type**     |`itldims get --ast <server type> --all`|Displays all the attributes using Server Type    |
+| 3. List **Server IPs containing specific attributes**       |`itldims get --ip <attribute> --only`|Displays Server IPs containing specific attribute |
+| 4. Find **Server Types containing specific attributes**     |`itldims get --st <attribute> --only`|Displays Server Type containing specfic attribute |
+| 5. Find **Number of stored Server IPs**                     |`itldims get --ip --count`           |Displays the number of Server IPs in the DB |
 
-| Flags      | Input                                      | Output                                               |
-|-------------------------------------------------------------|------------------------------------------|-----------------------------------------------------|
-| 1. Find value of a **attribute from Server IP**  | `-aip` |    |
-| 1. Find value of a **attribute from Server Type**| `-ast` |    |
-| 2. Find **Server IP from attribute**            | `-ip`       |    |
-| 2. Find **Server Type from attribute**     | `-st`     |    |
-| 3. List **Display all attributes**       | `--all`      |    |
-| 4. Find **Display without values**                      | `--only`      |    |
+Possible flags for facillitating data retrieval
+| Input                                      | Output                                              |
+|------------------------------------------|-----------------------------------------------------|
+| `--aip` |Helps display value of a **attribute from Server IP**   |
+| `--ast` |Helps display value of a **attribute from Server Type**    |
+| `--ip`       |Helps display **Server IP from attribute**     |
+| `--st`     |Helps display **Server Type from attribute**      |
+| `--all`      |Helps display **Display all attributes**    |
+| `--only`      |Helps display **Display without values**    |
 
 
-Possible commands for data retrieval in a tabular form are as follows:
+Other possible commands
 | Description                                                  | Input                                          | Output                                       |
 |--------------------------------------------------------------|------------------------------------------------|----------------------------------------------|
 | 1. List value of a specific attribute from a specific server | `itldims get <server IP> <attribute>`          | Value of attribute displayed                 |
