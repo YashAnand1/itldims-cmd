@@ -1,6 +1,6 @@
 # Possible Commands For Data Retrieval
 ___
-NOTE: keys are in the form of: </*servers*/*server-type*/*server-IP*/*attribute*>
+NOTE: keys are in the form of: </*servers*/*server-type*/*server-IP*/*attribute*>  
 Commands that need to be added: date, time, recently updated.
 
 ___
