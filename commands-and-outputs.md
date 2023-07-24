@@ -4,7 +4,7 @@ total connected ips?
 change -s and -t flags.
 
 Possible commands for data retrieval in a tabular form are as follows:
-| Use cases                                                 | Input                                      | Output                                               |
+| Use cases                                                 | Input                                      | Output                                              |
 |-------------------------------------------------------------|------------------------------------------|-----------------------------------------------------|
 | 1. Find value of a **specific attribute from a Server IP**  |`itldims get --aip <server IP> <attribute>`|Displays values of an attribute from a server IP  |
 | 1. Find value of a **specific attribute from a Server Type**|`itldims get --ast <server Type> <attribute>`|Displays values of an attribute from a server Type |
@@ -15,14 +15,14 @@ Possible commands for data retrieval in a tabular form are as follows:
 | 5. Find **Number of stored Server IPs**                     |`itldims get --ip --count`           |Displays the number of Server IPs in the DB |
 
 Possible flags for facillitating data retrieval
-| Input                                      | Output                                              |
-|------------------------------------------|-----------------------------------------------------|
-| `--aip` |Helps display value of a **attribute from Server IP**   |
-| `--ast` |Helps display value of a **attribute from Server Type**    |
-| `--ip`       |Helps display **Server IP from attribute**     |
-| `--st`     |Helps display **Server Type from attribute**      |
-| `--all`      |Helps display **Display all attributes**    |
-| `--only`      |Helps display **Display without values**    |
+| Description                                     |Input | Output                      |
+|--------------------------------------------|----|------------------------------------|
+|Helps display value of a **attribute from Server IP**|`--aip`|Attributes from Server IP can be found|
+|Helps display value of a **attribute from Server Type**|`--ast`|Attribute from Server Type can be found|
+|Helps display **Server IP from attribute**|`--ip`|Server IP from Attribute can be found|
+|Helps display **Server Type from attribute**|`--st`|Server Type from Attribute can be found|
+|Helps display **Display all attributes**|`--all` |All attributes can be displayed|
+|Helps display **Display without values**|`--only`|Only values can be displayed|
 
 
 Other possible commands
