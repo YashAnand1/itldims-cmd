@@ -33,7 +33,7 @@ Other possible commands
 | Description                                                  | Input                                          | Output                                       |
 |--------------------------------------------------------------|------------------------------------------------|----------------------------------------------|
 | 01. List values of all attributes from all servers| `itldims get --all`| Values of all attributes of all servers displayed|
-| 02. List values of attribute & sort by ascending| `itldims get --aip <server IP> <attribute> --sort-a`| Values of all attributes of all servers displayed|
+| 02. List values of attribute & sort by ascending| `itldims get --aip <server IP> <attribute> --sort-a`| Values sorted in ascending order & displayed|
 | 03. List values of attribute & sort by descending             | `itldims get --aip <server IP> <attribute> --sort-d`                    | Values sorted in descending order & displayed                        |
 | 04. List values of an attributes between a range              | `itldims get --aip <server IP> <attribute> --range <min num> <max num>` | Values between a range are displayed                                 |
 | 05. List the number of times attribute has been changed       | `itldims get --aip <server IP> <attribute> --findrev`                   | Revision number of current value displayed                           |
