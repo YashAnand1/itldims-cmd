@@ -1,11 +1,12 @@
 package main
 
-import (
+import ( //Importation of packages which help with formatting, logging and interacting with http addresses.
 	"fmt"
 	"log"
 	"net/http"
 
-	"github.com/spf13/cobra"
+	"github.com/spf13/cobra" //importation of the cobra tool for creating commands.
+	// "go.etcd.io/etcd/pkg/v3/cobrautl"
 )
 
 var rootITLDIMS = &cobra.Command{
@@ -15,12 +16,12 @@ var rootITLDIMS = &cobra.Command{
 	Run: func(cmd *cobra.Command, args []string) {
 		response, err := http.Get("http://localhost:8181/servers/")
 		if err != nil {
-			log.Fatalf("Failed to connect to the API.")
+			log.Fatalf("Failed to connect to the etcd API.")
 		}
 		defer response.Body.Close()
 
 		if response.StatusCode == http.StatusOK {
-			fmt.Println("interaction with etcd can be done.")
+			fmt.Println("Successsfully onnected with API. Interaction with etcd can be done.")
 		} else {
 			fmt.Println("Failed to interact with the API.")
 		}
