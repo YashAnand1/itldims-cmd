@@ -40,7 +40,7 @@ Other possible commands
 | 06. List the value of an attribute from an earlier revision   | `itldims get --aip <server IP> <attribute> --rev <revision number>`     | Old version of the value displayed                                   |
 | 09. List which server has attribute has specific value        | `itldims get --aip <server IP> <attribute> --find "NONE"`               | Servers containing attribute values as NONE are only displayed       |
 | 10. List values of multiple attributes in a server           | `itldims get --aip <server IP> <attribute> <attribute> <attribute>`     | Values of multiple attributes displayed  |
-| 11. 'itldims --help' or 'itldims' to provide usage           | `itldims` or `etcdctl --help`                                           | Usage and options related to itldims displayed|
+| 11. 'itldims --help' or 'itldims' to provide usage           | `itldims` or `itldims --help`                                           | Usage and options related to itldims displayed|
 
 ___
 
