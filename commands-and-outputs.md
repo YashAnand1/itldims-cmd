@@ -2,6 +2,7 @@
 ___
 NOTE: keys are in the form of: </*servers*/*server-type*/*server-IP*/*attribute*>  
 Commands that need to be added: date, time, recently updated.
+for reference: "etcdctl get --prefix "/servers/" | grep "10.249.221.22"| grep "RAM" | xargs -I {} etcdctl get {}"
 
 ___
 
