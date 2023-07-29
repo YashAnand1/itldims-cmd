@@ -6,7 +6,7 @@ for reference: "etcdctl get --prefix "/servers/" | grep "10.249.221.22"| grep "R
 
 ___
 
-Possible commands for data retrieval in a tabular form are as follows:
+Possible commands for data retrieval that I will be working on are as follows:
 | Use cases                                                 | Input                                      | Output                                              |
 |-------------------------------------------------------------|------------------------------------------|-----------------------------------------------------|
 | 01. Find value of a **specific attribute from a Server IP**  |`itldims get --aip <server IP> <attribute>`|Displays values of an attribute from a server IP  |
@@ -30,7 +30,7 @@ Possible flags for facillitating data retrieval
 |07. Helps display **Display without values**|`--only`|Only values can be displayed|
 ___
 
-Other possible commands
+Other possible flags/commands for enhancing data results
 | Description                                                  | Input                                          | Output                                       |
 |--------------------------------------------------------------|------------------------------------------------|----------------------------------------------|
 | 01. List values of all attributes from all servers| `itldims get --all`| Values of all attributes of all servers displayed|
