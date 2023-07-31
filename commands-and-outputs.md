@@ -9,13 +9,13 @@ ___
 Possible commands for data retrieval that I will be working on are as follows:
 | Use cases                                                 | Input                                      | Output                                              |
 |-------------------------------------------------------------|------------------------------------------|-----------------------------------------------------|
-| 01. Find value of a **specific attribute from a Server IP**  |`itldims get --aip <server IP> <attribute>`|Displays values of an attribute from a server IP  |
-| 01. Find value of a **specific attribute from a Server Type**|`itldims get --ast <server Type> <attribute>`|Displays values of an attribute from a server Type |
-| 02. Find **list of attributes running from server IP**       |`itldims get --aip <server IP> --all`|Displays all the attributes using Server IP       |
-| 02. Find **list of attributes running from server type**     |`itldims get --ast <server type> --all`|Displays all the attributes using Server Type    |
-| 03. List **Server IPs containing specific attributes**       |`itldims get --ip <attribute> --only`|Displays Server IPs containing specific attribute |
-| 04. Find **Server Types containing specific attributes**     |`itldims get --st <attribute> --only`|Displays Server Type containing specfic attribute |
-| 05. Find **Number of stored Server IPs**                     |`itldims get --ip --count`           |Displays the number of Server IPs in the DB |
+| 01. Find value of a **specific attribute from a Server IP**  |`itldims get --server <server IP> <attribute>`|Displays values of an attribute from a server IP  |
+| 01. Find value of a **specific attribute from a Server Type**|`itldims get --server-type <server Type> <attribute>`|Displays values of an attribute from a server Type |
+| 02. Find **list of attributes running from server IP**       |`itldims get --server <server IP> --all`|Displays all the attributes using Server IP       |
+| 02. Find **list of attributes running from server type**     |`itldims get --server-type <server type> --all`|Displays all the attributes using Server Type    |
+| 03. List **Server IPs containing specific attributes**       |`itldims get --list-servers <attribute> --only`|Displays Server IPs containing specific attribute |
+| 04. Find **Server Types containing specific attributes**     |`itldims get --list-server-types <attribute> --only`|Displays Server Type containing specfic attribute |
+| 05. Find **Number of stored Server IPs**                     |`itldims get --list-servers --count`           |Displays the number of Server IPs in the DB |
 
 ___
 Possible flags for facillitating data retrieval
