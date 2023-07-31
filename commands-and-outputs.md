@@ -21,28 +21,24 @@ ___
 Possible flags for facillitating data retrieval
 | Description                                     |Input | Output                      |
 |--------------------------------------------|----|------------------------------------|
-|01. Helps display value of a **attribute from Server IP**|`--aip`|Attributes from Server IP can be found|
-|02. Helps display value of a **attribute from Server Type**|`--ast`|Attribute from Server Type can be found|
-|03. Helps display **Server IP from attribute**|`--ip`|Server IP from Attribute can be found|
-|04. Helps display **Server Type from attribute**|`--st`|Server Type from Attribute can be found|
+|01. Helps display value of a **attribute from Server IP**|`--server`|Attributes from Server IP can be found|
+|02. Helps display value of a **attribute from Server Type**|`--server-type`|Attribute from Server Type can be found|
+|03. Helps display **Server IP from attribute**|`--list-servers`|Server IP from Attribute can be found|
+|04. Helps display **Server Type from attribute**|`--list-server-types`|Server Type from Attribute can be found|
 |05. Helps display **Display all attributes**|`--all` |All attributes can be displayed|
 |06. Helps display **Display without values**|`--only`|Only values can be displayed|
-|07. Helps display **Display without values**|`--only`|Only values can be displayed|
 ___
 
 Other possible flags/commands for enhancing data results
 | Description                                                  | Input                                          | Output                                       |
 |--------------------------------------------------------------|------------------------------------------------|----------------------------------------------|
 | 01. List values of all attributes from all servers| `itldims get --all`| Values of all attributes of all servers displayed|
-| 02. List values of attribute & sort by ascending| `itldims get --aip <server IP> <attribute> --sort-a`| Values sorted in ascending order & displayed|
-| 03. List values of attribute & sort by descending             | `itldims get --aip <server IP> <attribute> --sort-d`                    | Values sorted in descending order & displayed                        |
-| 04. List values of an attributes between a range              | `itldims get --aip <server IP> <attribute> --range <min num> <max num>` | Values between a range are displayed                                 |
-| 05. List the number of times attribute has been changed       | `itldims get --aip <server IP> <attribute> --findrev`                   | Revision number of current value displayed                           |
-| 06. List the value of an attribute from an earlier revision   | `itldims get --aip <server IP> <attribute> --rev <revision number>`     | Old version of the value displayed                                   |
-| 09. List which server has attribute has specific value        | `itldims get --aip <server IP> <attribute> --find "NONE"`               | Servers containing attribute values as NONE are only displayed       |
-| 10. List values of multiple attributes in a server           | `itldims get --aip <server IP> <attribute> <attribute> <attribute>`     | Values of multiple attributes displayed  |
+| 02. List values of attribute & sort by ascending| `itldims get --server <server IP> <attribute> --sort-a`| Values sorted in ascending order & displayed|
+| 03. List values of attribute & sort by descending             | `itldims get --server-type <server IP> <attribute> --sort-d`                    | Values sorted in descending order & displayed                        |
+| 04. List values of an attributes between a range              | `itldims get --server <server IP> <attribute> --range <min num> <max num>` | Values between a range are displayed                                 |
+| 05. List the number of times attribute has been changed       | `itldims get --server <server IP> <attribute> --findrev`                   | Revision number of current value displayed                           |
+| 06. List the value of an attribute from an earlier revision   | `itldims get --server <server IP> <attribute> --rev <revision number>`     | Old version of the value displayed                                   |
+| 09. List which server has attribute has specific value        | `itldims get --server <server IP> <attribute> --find "NONE"`               | Servers containing attribute values as NONE are only displayed       |
+| 10. List values of multiple attributes in a server           | `itldims get --server <server IP> <attribute> <attribute> <attribute>`     | Values of multiple attributes displayed  |
 | 11. 'itldims --help' or 'itldims' to provide usage           | `itldims` or `itldims --help`                                           | Usage and options related to itldims displayed|
-
 ___
-
-
