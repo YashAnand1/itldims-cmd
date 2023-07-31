@@ -9,7 +9,8 @@ ___
 Possible commands for data retrieval that I will be working on are as follows:
 | Use cases                                                 | Input                                      | Output                                              |
 |-------------------------------------------------------------|------------------------------------------|-----------------------------------------------------|
-| 01. Find value of a **specific attribute from a Server IP**  |`itldims get --server <server IP> <attribute>`|Displays values of an attribute from a server IP  |
+|01. Find value of a **specific attribute from a Server IP & Server Attribute**  |`itldims get --server <server IP> --server-type <server-type> <attribute>`|Displays values of an attribute from a server IP & Type | 
+|01. Find value of a **specific attribute from a Server IP**  |`itldims get --server <server IP> <attribute>`|Displays values of an attribute from a server IP  |
 | 01. Find value of a **specific attribute from a Server Type**|`itldims get --server-type <server Type> <attribute>`|Displays values of an attribute from a server Type |
 | 02. Find **list of attributes running from server IP**       |`itldims get --server <server IP> --all`|Displays all the attributes using Server IP       |
 | 02. Find **list of attributes running from server type**     |`itldims get --server-type <server type> --all`|Displays all the attributes using Server Type    |
