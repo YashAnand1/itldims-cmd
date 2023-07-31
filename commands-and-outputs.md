@@ -3,7 +3,6 @@ ___
 NOTE: keys are in the form of: </*servers*/*server-type*/*server-IP*/*attribute*>  
 Commands that are yet to be added: date, time, recently updated.   
 for reference: "etcdctl get --prefix "/servers/" | grep "10.249.221.22"| grep "RAM" | xargs -I {} etcdctl get {}"
-
 ___
 
 Possible commands for data retrieval that I will be working on are as follows:
@@ -27,7 +26,7 @@ Possible flags for facillitating data retrieval
 |04. Helps display **Server Type from attribute**|`--list-server-types`|Server Type from Attribute can be found|
 |05. Helps display **Display all attributes**|`--all` |All attributes can be displayed|
 |06. Helps display **Display without values**|`--only`|Only values can be displayed|
-___
+____
 
 Other possible flags/commands for enhancing data results
 | Description                                                  | Input                                          | Output                                       |
