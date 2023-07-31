@@ -5,6 +5,7 @@ import (
 	"io/ioutil"
 	"log"
 	"net/http"
+
 	"github.com/spf13/cobra"
 )
 
@@ -21,9 +22,7 @@ var (
 			defer response.Body.Close()
 
 			if response.StatusCode == http.StatusOK {
-				fmt.Println("Successfully connected with API. Interaction with etcd can be done.")
-			} else {
-				fmt.Println("Failed to interact with the API.")
+				fmt.Println("Successfully onnected with API. Interaction with etcd can be done.")
 			}
 		},
 	}
@@ -34,15 +33,14 @@ var (
 		Long:  "Find the value of a specific attribute from a Server IP",
 
 		Run: func(cmd *cobra.Command, args []string) {
-			aip, _ := cmd.Flags().GetString("aip")
-			if aip == "" || len(args) == 0 {
-				log.Fatal("Please provide a server IP and attribute.")
+			server, _ := cmd.Flags().GetString("server")
+			if server == "" || len(args) == 0 {
+				log.Fatal("Enter correct server IP and attribute.")
 			}
 
 			attribute := args[0]
-
 			serverType := "VM"
-			etcdKey := fmt.Sprintf("/servers/%s/%s/%s", serverType, aip, attribute)
+			etcdKey := fmt.Sprintf("/servers/%s/%s/%s", serverType, server, attribute)
 
 			response, err := http.Get("http://localhost:8181" + etcdKey)
 			if err != nil {
@@ -55,9 +53,7 @@ var (
 				if err != nil {
 					log.Fatalf("Failed to read response body: %v", err)
 				}
-				fmt.Printf("Attribute value for server IP %s and attribute %s: %s\n", aip, attribute, string(body))
-			} else {
-				fmt.Printf("Failed to fetch the attribute value for server IP %s and attribute %s.\n", aip, attribute)
+				fmt.Printf("Attribute value for server IP %s and attribute %s: %s\n", server, attribute, string(body))
 			}
 		},
 	}
@@ -65,9 +61,8 @@ var (
 
 func init() {
 	rootITLDIMS.AddCommand(getCmd)
-
-	getCmd.Flags().String("aip", "", "Server IP to fetch the attribute value from")
-	getCmd.MarkFlagRequired("aip")
+	getCmd.Flags().String("server", "", "Server IP to fetch the attribute value from")
+	getCmd.MarkFlagRequired("server")
 }
 
 func main() {
