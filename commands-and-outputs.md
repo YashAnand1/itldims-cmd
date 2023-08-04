@@ -4,7 +4,7 @@ NOTE: keys are in the form of: </*servers*/*server-type*/*server-IP*/*attribute*
 Commands that are yet to be added: date, time, recently updated.   
 for reference: "etcdctl get --prefix "/servers/" | grep "10.249.221.22"| grep "RAM" | xargs -I {} etcdctl get {}"
 ___
-Aug 04 - itldims get <input 1> <input 2> - Possible to work on it?
+Aug 03 - itldims get <input 1> <input 2> - To work on it?
 ___
 Possible commands for data retrieval that I will be working on are as follows:
 | Use cases                                                 | Input                                      | Output                                              |
