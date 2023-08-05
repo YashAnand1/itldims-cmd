@@ -7,7 +7,7 @@
 
 ## Possible Combinations
 `itldims get <input 1> <input 2>` can be used in the following ways:
-- `itldims get <server-IP> <server-Type>`
+- `itldims get <server-IP> <server-Type>` will be giving the following output:
   ```
   Key: /servers/VM/10.249.221.22/Netmask
   Value: 255.255.255.128
@@ -38,7 +38,6 @@
 
   Key: /servers/VM/10.249.221.22/RAM
   Value: 32GB
-
   ```
 - `itldims get <server-IP> <Attribute>`
 - `itldims get <server-IP> <Value>`
