@@ -40,6 +40,13 @@
   Value: 32GB
   ```
 - `itldims get <server-IP> <Attribute>`
+  ```
+  Key: /servers/VM/10.249.221.22/RAM
+  Value: 32GB
+
+  Key: /servers/VM/10.249.221.22/data
+  Value: {"API":"CheckpostWebService","Application":"checkpost","CPU":"8","Environment":"Production","External_Disk":"sdb:500GB","External_Partition":"u01:322GB","Gateway":"10.249.221.1","Hostname":"SP-CHKP02","Internal_Disk":"sda:105GB","Internal_Partition":"/:20GB\n/var:9GB\n/home:10GB\n/opt:6GB\n/tmp:10GB\n/boot:2GB\n/boot/efi:1GB","LVM":"home\nopt\nroot\nswap\ntmp\nusr\nvar\nvar_log_audit\nlv0","NFS":"None","Netmask":"255.255.255.128","OS":"RHEL 8.7","PV":"PV Name=/dev/sda3\nPV Size=101.00g\nPV Name=/dev/sdb\nPV Size=500.00g","RAM":"32GB","VG":"/dev/mapper/vg0-lv0:500GB"}
+  ```
 - `itldims get <server-IP> <Value>`
 - `itldims get <server-Type> <server-IP>`
 - `itldims get <server-Type> <Attribute>`
