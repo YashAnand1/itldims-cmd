@@ -39,7 +39,11 @@ var (
 			}
 
 			for key, value := range data {
-				if strings.Contains(value, args[0]) || strings.Contains(key, args[0]) && (len(args) == 1 || strings.Contains(value, args[1]) || strings.Contains(key, args[1])) {
+				if strings.Contains(key, "/data") {
+					continue
+				}
+
+				if strings.Contains(value, args[0]) && strings.Contains(key, args[1]) || strings.Contains(key, args[0]) && strings.Contains(value, args[1]) {
 					fmt.Printf("%s\n%s\n\n", key, value)
 				}
 			}
