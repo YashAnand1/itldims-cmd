@@ -6,8 +6,15 @@
 - The created key will be then added to `localhost:8181/servers/` and the output will be retrieved as the data.
 
 ## Issues
-- **Wildcards Not Supported:** Etcdctl by default, [does not allow](https://github.com/etcd-io/etcd/issues/9875#issuecomment-400466889) searching with wildcards. This means that "/servers/*/10.249.221.22/API" will not be giving any value as the key "/servers/VM/10.249.221.22/API" has been broken.
-- **Hardcoding A Component:** As stated above, if the key is not complete, etcdctl will not be able to give value. To by-pass this issue, "Server Type = VM" had to be hardcoded for creating `itldims get --server <IP> <Attribute>`.
+- **Wildcards Not Supported:** Etcdctl by default, [does not allow](https://github.com/etcd-io/etcd/issues/9875#issuecomment-400466889) searching with wildcards. This means that "/servers/*/10.249.221.22/API" will not be giving any value as the key "/servers/VM/10.249.221.22/API" has been broken. However, "--prefix" option can help retrieve values of all attributes from Server Type & IP from "/servers/<Type>/<IP>".
+- **Hardcoding A Component:** As stated above, if the key is not complete, etcdctl will not be able to give value. To by-pass this issue, "Server Type = VM" had to be hardcoded for creating `itldims get --server <IP> <Attribute>`. The command works this way but only for servers that are on VMs.
 
 ## Possible Combinations
+These can be understood in detail through the [list of commands](https://github.com/yash-anand-fosteringlinux/Commands-and-Outputs/blob/main/Old-Keys-Input/ListOfCommands.md) that are to be created.
+
+## Test Outputs
+- Running `itldims get --server 10.249.221.22 RAM` for retrieving value of RAM from Server IP (and the hardcoded VM server type) gives the following output:
+  ```
+  Value: 32GB
+  ```
 
