@@ -7,37 +7,37 @@
 
 ## Possible Combinations
 `itldims get <input 1> <input 2>` can be used in the following ways:
-- `itldims get <server-IP> <server-Type>` or `itldims get 10.249.221.22 VM `will be giving the following output:
-```
-Key: /servers/VM/10.249.221.22/Gateway
-Value: 10.249.221.1
+- `itldims get <server-IP> <server-Type>` or `itldims get 10.249.221.22 VM ` is giving the following output:
+  ```
+  Key: /servers/VM/10.249.221.22/Gateway
+  Value: 10.249.221.1
 
-Key: /servers/VM/10.249.221.22/LVM
-Value: home
+  Key: /servers/VM/10.249.221.22/LVM
+  Value: home
 
-Key: /servers/VM/10.249.221.22/CPU
-Value: 8
+  Key: /servers/VM/10.249.221.22/CPU
+  Value: 8
 
-Key: /servers/VM/10.249.221.22/API
-Value: CheckpostWebService
+  Key: /servers/VM/10.249.221.22/API
+  Value: CheckpostWebService
 
-Key: /servers/VM/10.249.221.22/PV
-Value: PV Name=/dev/sda3
+  Key: /servers/VM/10.249.221.22/PV
+  Value: PV Name=/dev/sda3
 
-Key: /servers/VM/10.249.221.22/External_Disk
-Value: sdb:500GB
+  Key: /servers/VM/10.249.221.22/External_Disk
+  Value: sdb:500GB
 
-Key: /servers/VM/10.249.221.22/Internal_Disk
-Value: sda:105GB
+  Key: /servers/VM/10.249.221.22/Internal_Disk
+  Value: sda:105GB
 
-Key: /servers/VM/10.249.221.22/RAM
-Value: 32GB
+  Key: /servers/VM/10.249.221.22/RAM
+  Value: 32GB
 
-Key: /servers/VM/10.249.221.22/Netmask
-Value: 255.255.255.128
-```
+  Key: /servers/VM/10.249.221.22/Netmask
+  Value: 255.255.255.128
+  ```
 
-- `itldims get <server-IP> <Attribute>`or `itldims get 10.246.40.142 vahan` will be giving the following output:
+- `itldims get <server-IP> <Value>`or `itldims get 10.246.40.142 vahan` is giving the following output:
   ```
   Key: /servers/Physical/10.246.40.142/Application
   Value: vahantaxws
@@ -45,8 +45,49 @@ Value: 255.255.255.128
   Key: /servers/Physical/10.246.40.142/Hostname
   Value: vahanapp05
   ```
+
+- `itldims get <server-IP> <Attribute>` or `itldims get 10.249.221.22 RAM` is giving the following output:
+  ```
+  Key: /servers/VM/10.249.221.22/RAM
+  Value: 32GB
+  ```
 - `itldims get <server-Type> <server-IP>`
-- `itldims get <server-Type> <Attribute>`
+  ```
+  Key: /servers/Physical/10.246.40.142/VG
+  Value: /dev/mapper/vg0-lv0:1000GB
+
+  Key: /servers/Physical/10.246.40.142/OS
+  Value: RHEL 7.9
+
+  Key: /servers/Physical/10.246.40.142/External_Partition
+  Value: u01:1000GB
+
+  Key: /servers/Physical/10.246.40.142/External_Disk
+  Value: sdc:500GB
+
+  Key: /servers/Physical/10.246.40.142/Application
+  Value: vahantaxws
+
+  Key: /servers/Physical/10.246.40.142/Internal_Partition
+  Value: /:32GB
+
+  Key: /servers/Physical/10.246.40.142/LVM
+  Value: home
+
+  Key: /servers/Physical/10.246.40.142/CPU
+  Value: 8
+
+  Key: /servers/Physical/10.246.40.142/Hostname
+  Value: vahanapp05
+  ```
+- `itldims get <server-Type> <Attribute>` or `itldims get VM 10.249.221.22` is giving the following output:
+  ```
+  Key: /servers/VM/10.249.221.22/LVM
+  Value: home
+
+  Key: /servers/Physical/10.246.40.142/LVM
+  Value: home
+  ```
 - `itldims get <server-Type> <Value>`
 - `itldims get <Attribute> <server-IP>`
 - `itldims get <Attribute> <server-Type>`
