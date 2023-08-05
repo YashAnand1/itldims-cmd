@@ -88,9 +88,29 @@
   Key: /servers/Physical/10.246.40.142/LVM
   Value: home
   ```
-- `itldims get <server-Type> <Value>`
-- `itldims get <Attribute> <server-IP>`
-- `itldims get <Attribute> <server-Type>`
-- `itldims get <Attribute> <Value>`
+- `itldims get <server-Type> <Value>` or `itldims get VM 32GB` is giving the following output:
+  ```
+  Key: /servers/Physical/10.246.40.152/RAM
+  Value: 32GB
 
+  Key: /servers/Physical/10.246.40.139/RAM
+  Value: 32GB
 
+  Key: /servers/Physical/10.246.40.142/Internal_Partition
+  Value: /:32GB
+  ```
+- `itldims get <Attribute> <server-IP>` or `itldims get VM 32GB` is giving the following output:
+  ```
+  Key: /servers/VM/10.249.221.22/CPU
+  Value: 8
+  ```
+- `itldims get <Attribute> <server-Type>` or `itldims get VM CPU` is giving the following output:
+  ```
+  Key: /servers/VM/10.249.221.22/CPU
+  Value: 8
+  ```
+- `itldims get <Attribute> <Value>` or `itldims get NFS None` is giving the following output:
+  ```
+  Key: /servers/VM/10.249.221.21/NFS
+  Value: None
+  ```
