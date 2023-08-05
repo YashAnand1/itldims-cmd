@@ -99,12 +99,12 @@
   Key: /servers/Physical/10.246.40.142/Internal_Partition
   Value: /:32GB
   ```
-- `itldims get <Attribute> <server-IP>` or `itldims get VM 32GB` is giving the following output:
+- `itldims get <Attribute> <server-IP>` or `itldims get RAM 10.249.221.22` is giving the following output:
   ```
-  Key: /servers/VM/10.249.221.22/CPU
-  Value: 8
+  Key: /servers/VM/10.249.221.22/RAM
+  Value: 32GB
   ```
-- `itldims get <Attribute> <server-Type>` or `itldims get VM CPU` is giving the following output:
+- `itldims get <Attribute> <server-Type>` or `itldims get CPU VM` is giving the following output:
   ```
   Key: /servers/VM/10.249.221.22/CPU
   Value: 8
