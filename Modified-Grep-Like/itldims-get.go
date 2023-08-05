@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"io/ioutil"
+	"io"
 	"log"
 	"net/http"
 	"strings"
@@ -39,8 +39,8 @@ var (
 			}
 
 			for key, value := range data {
-				if strings.Contains(key, args[0]) && strings.Contains(key, args[1]) {
-					fmt.Printf("%s\n %s\n\n", key, value)
+				if strings.Contains(key, args[0]) && (len(args) == 1 || strings.Contains(value, args[1]) || strings.Contains(key, args[1])) {
+					fmt.Printf("%s\n%s\n\n", key, value)
 				}
 			}
 		},
@@ -58,7 +58,7 @@ func fetchDataFromEtcdAPI() (map[string]string, error) {
 		return nil, fmt.Errorf("failed to fetch data from the etcd API. Status code: %d", response.StatusCode)
 	}
 
-	body, err := ioutil.ReadAll(response.Body)
+	body, err := io.ReadAll(response.Body)
 	if err != nil {
 		return nil, fmt.Errorf("failed to read response body: %v", err)
 	}
