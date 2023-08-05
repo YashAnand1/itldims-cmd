@@ -5,7 +5,7 @@
 - The key is in the format of `/servers/<server-Type>/<server-IP>/<Attribute>`. The user is allowed to use the `itldims get <input 1> <input 2>`, the user is allowed to search for any possible combinations of key components.
 - The 2 inputs entered by the user are then searched for and the unnecessary key-values filtered out from the data in `localhost:8181/servers/`.
 
-## Possible Combinations
+## Possible Tested Combinations
 `itldims get <input 1> <input 2>` can be used in the following ways:
 - `itldims get <server-IP> <server-Type>` or `itldims get 10.249.221.22 VM ` is giving the following output:
   ```
