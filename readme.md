@@ -13,4 +13,4 @@ There are 2 ways of retrieving the data. These are:
 - This method utilises the `itldims get --server <Server IP> <Attribute>` command at the moment. More commands are yet to be created as per [this](https://github.com/yash-anand-fosteringlinux/Commands-and-Outputs/blob/main/Old-Keys-Input/ListOfCommands.md) command list. 
 - In this code, the API is connected with `localhost:8181/servers/<type>/<IP>/<attribute>`.
 - User enters the Server IP and the attribute he wishes to learn about and the value is shown.
-- It utilises hardcoded "type" in the code for entering in `localhost:8181/servers/<type>/<IP>/<Attribute>`.
+- It utilises hardcoded "type" in the code for retrieving data of an Attribute from a Server IP in `localhost:8181/servers/<type>/<IP>/<Attribute>`. There should not be any need to hardcode the server type.
