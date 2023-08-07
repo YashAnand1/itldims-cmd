@@ -4,6 +4,7 @@
 - Workings of the code
 - Command Combinations
 - Outputs of Command Combinations
+- Upcoming features
 
 # Workings of the code
 - This code utilises a modifed version of  [main.go](https://github.com/yash-anand-fosteringlinux/Commands-and-Outputs/blob/main/Old-Keys-Input/main.go), where the etcd API url `localhost:8181/servers/` is used to display all the key-values. 
@@ -13,20 +14,20 @@
 # Command Combinations
 | S. No. | Command Combination               | Output Description                                      | Use-Case |
 |-------|-----------------------------------|---------------------------------------------------------|------------|
-| 1     | `itldims get server`              | Displays attribute values of all Servers              | Helps find all data without knowing key-componets or their values. Can be used if user wants to see all the data. |
+| 1     | `itldims get server`              | Displays attribute values of all Servers              | Helps user see all the running servers with their data. |
 | 2     | `itldims get <Attribute>`         | Displays all Servers containing a specific Attribute   | Helps learn about a specific attribute value of all servers. User can find the RAMs of all servers. |
 | 3     | `itldims get <Server Type>`       | Displays all Attribute values of a specific Server Type | Helps learn about a specific attribute value of all VMs. User can find values of all attributes running on all VMs. |
-| 4     | `itldims get <Server IP>`         | Displays all Attribute values of a specific Server IP  | Helps learn about a specific attribute value of all VMs. User can find values of all attributes running on a specific Server IP. |
-| 5 | `itldims get <Value>` | Displays all Servers containing a specific Attribute value | Helps find all the servers containing a specific attribute value. User can find all the servers that are running a specific application. |
-| 6     | `itldims get <Attribute> <Server Type>` | Displays specific Attribute values of a specific Server Type |  |
-| 7     | `itldims get <Server Type> <Attribute>` | Displays specific Attribute values of a specific Server Type |  |
-| 8 | `itldims get <Server Type> <Value>` | Displays all Server Types containing a specific value  | |
-| 9 | `itldims get <Value> <Server Type>` | Displays all Server Types containing a specific value  | |
-| 10 | `itldims get <Attribute> <Server IP>`   | Displays specific Attribute values of a specific Server IP   |  |
-| 11 | `itldims get <Server IP> <Attribute>`   | Displays specific Attribute values of a specific Server IP   |  |
-| 12 | `itldims get <Server IP> <Value>` | Displays all Server IPs containing a specific value  | |
-| 13 | `itldims get  <Value> <Server IP>` | Displays all Server IPs containing a specific value  | |
-| 14 | `itldims get <Server IP> <Server Type>` | Displays all Attribute values of a specific Server IP        |  |
+| 4     | `itldims get <Server IP>`         | Displays all Attribute values of a specific Server IP  | Helps learn about a specific attribute value of all VMs. User can find values of all attributes running on '10.249.221.22'. |
+| 5 | `itldims get <Value>` | Displays all Servers containing a specific Attribute value | Helps find all the servers containing a specific attribute value. User can find all the servers that are running 'vahanpgi'. |
+| 6     | `itldims get <Attribute> <Server Type>` | Displays specific Attribute values of a specific Server Type |  Helps find specific attribute value of a specifc Server Type. User can find CPUs of all VMs. |
+| 7     | `itldims get <Server Type> <Attribute>` | Displays specific Attribute values of a specific Server Type |  Helps find specific attribute value of a specifc Server Type. User can find CPUs of all VMs. |
+| 8 | `itldims get <Server Type> <Value>` | Displays all Server Types containing a specific value  | Helps learn if any VM is running 'vahanpgi'. |
+| 9 | `itldims get <Value> <Server Type>` | Displays all Server Types containing a specific value  | Helps learn if any VM is running 'vahanpgi'. |
+| 10 | `itldims get <Attribute> <Server IP>`   | Displays specific Attribute values of a specific Server IP   | Helps find specific attribute value of a specifc Server IP. User can find RAM of '10.249.221.22'. |
+| 11 | `itldims get <Server IP> <Attribute>`   | Displays specific Attribute values of a specific Server IP   | Helps find specific attribute value of a specifc Server IP. User can find RAM of '10.249.221.22'. |
+| 12 | `itldims get <Server IP> <Value>` | Displays all Server IPs containing a specific value  | Helps find specific attribute value of a specifc Server IP. User can find if any attribute is 'None' on '10.249.221.22'. |
+| 13 | `itldims get  <Value> <Server IP>` | Displays all Server IPs containing a specific value  | Helps find specific attribute value of a specifc Server IP. User can find if any attribute is 'None' on '10.249.221.22'. |
+| 14 | `itldims get <Server IP> <Server Type>` | Displays all Attribute values of a specific Server  | Helps find all attribute values for a specific Server. |
 
 
 ## Outputs of Command Combinations
