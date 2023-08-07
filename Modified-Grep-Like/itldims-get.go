@@ -39,17 +39,18 @@ var (
 			}
 
 			for key, value := range data {
-				if strings.Contains(key, "data") && strings.Contains(value, "{") && strings.Contains(value, "}") {
+				if strings.Contains(key, "{") || strings.Contains(key, "}") ||
+					strings.Contains(value, "{") || strings.Contains(value, "}") {
 					continue
 				}
 
 				if len(args) == 1 {
-					if !strings.Contains(key, "data") && !strings.Contains(value, "{") && !strings.Contains(value, "}") &&
+					if !strings.Contains(key, "data") &&
 						(strings.Contains(value, args[0]) || strings.Contains(key, args[0])) {
-						fmt.Printf("%s\n%s\n\n", key, value)
+						fmt.Printf("%s\n\n", key) || fmt.Printf("%s\n\n", value)
 					}
 				} else if len(args) == 2 {
-					if !strings.Contains(key, "data") && !strings.Contains(value, "{") && !strings.Contains(value, "}") &&
+					if !strings.Contains(key, "data") &&
 						(strings.Contains(key, args[0]) || strings.Contains(value, args[0])) &&
 						(strings.Contains(key, args[1]) || strings.Contains(value, args[1])) {
 						fmt.Printf("%s\n%s\n\n", key, value)
