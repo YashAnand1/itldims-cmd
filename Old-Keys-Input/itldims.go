@@ -61,7 +61,7 @@ var (
 
 func init() {
 	rootITLDIMS.AddCommand(getCmd)
-	getCmd.Flags().String("server", "", "Server IP to fetch the attribute value from")
+	getCmd.Flags().String("server", "", "Server IP")
 	getCmd.MarkFlagRequired("server")
 }
 
