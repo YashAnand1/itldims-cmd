@@ -80,39 +80,7 @@ key=/servers/VM/10.249.221.21/Gateway
 key=/servers/VM/10.249.221.21/RAM
 32GB
 ----------------------------
-
-key=/servers/Physical/10.246.40.139/LVM
-home
-opt
-root
-swap
-tmp
-usr
-var
-var_crash
-lv0
-----------------------------
-
-key=/servers/Physical/10.246.40.139/OS
-RHEL 7.9
-----------------------------
-
-key=/servers/Physical/10.246.40.142/CPU
-8
-----------------------------
-
-key=/servers/Physical/10.246.40.142/Internal_Disk
-sda:500GB
-----------------------------
-
-key=/servers/Physical/10.246.40.142/OS
-RHEL 7.9
-----------------------------
-
-key=/servers/Physical/10.246.40.142/RAM
-32GB
-----------------------------
-. . . . . . . . . 
+. . . . .
 ```
 
 **2. `itldims get <Attribute>` or `itldims get RAM` to get the following output:**
@@ -295,7 +263,7 @@ key=/servers/VM/10.249.221.22/Gateway
 ----------------------------
 ```
 
-**9. `itldims get <Server IP> <Server Type>` or `itldims get 10.249.221.22 VM`   to get the following output:**
+**10. `itldims get <Server IP> <Server Type>` or `itldims get 10.249.221.22 VM`   to get the following output:**
 ```
 key=/servers/VM/10.249.221.22/Gateway
 10.249.221.1
