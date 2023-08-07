@@ -1,5 +1,5 @@
 # Data Retrieval Commands
-
+This repository consits of commands to facilitate data retrieval process from etcd. The basic idea is to retrieve data without mentioning the whole keys but rather only the components of the keys.
 
 ## Methods
 There are 2 ways of retrieving the data. These are:  
