@@ -3,7 +3,8 @@ ___
 NOTE: keys are in the form of: </*servers*/*server-type*/*server-IP*/*attribute*>  
 Commands that are yet to be added: date, time, recently updated.   
 ___
-Possible commands for data retrieval that I will be working on are as follows:
+Possible commands for data retrieval that I will be working on are as follows:  
+
 | Use cases                                                 | Input                                      | Output                                              |
 |-------------------------------------------------------------|------------------------------------------|-----------------------------------------------------|
 |01. Find value of a **specific attribute from a Server IP**  |`itldims get --server <server IP> <attribute>`|Displays values of an attribute from a server IP  |
