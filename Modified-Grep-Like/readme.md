@@ -34,6 +34,7 @@
 ## Outputs of Command Combinations
 The possible combinations along with their outputs for the `itldims get` command have been provided below. For any output which is too lengthy, `. . . . .` has been used to signify that the mentioned output is not complete.
 
+   
 **1. `itldims get server`to get the following output:**
 ```
 key=/servers/Physical/10.246.40.139/CPU
@@ -83,6 +84,7 @@ key=/servers/VM/10.249.221.21/RAM
 . . . . .
 ```
 
+    
 **2. `itldims get <Attribute>` or `itldims get RAM` to get the following output:**
 ```
 key=/servers/VM/10.249.221.22/RAM
@@ -138,7 +140,7 @@ key=/servers/VM/10.249.221.22/Netmask
 . . . . .
 ```
 
-
+    
 **4. `itldims get <Server IP>` or `itldims get 10.249.221.22`  to get the following output:**
 ```
 key=/servers/VM/10.249.221.22/CPU
@@ -165,6 +167,7 @@ key=/servers/VM/10.249.221.22/Internal_Partition
 . . . . .
 ```
 
+    
 **5. `itldims get <Value>`  or `itldims get vahan`  to get the following output:**
 ```
 key=/servers/Physical/10.246.40.152/NFS
@@ -207,6 +210,7 @@ vahanapp05
 ----------------------------
 ```
 
+         
 **6. `itldims get <Attribute> <Server Type>` or `itldims get <Server Type> <Attribute>` or `itldims get VM RAM`  to get the following output:**
 ```
 key=/servers/VM/10.249.221.21/RAM
@@ -217,8 +221,7 @@ key=/servers/VM/10.249.221.22/RAM
 32GB
 ----------------------------
 ```
-
-
+           
 **7. `itldims get <Server Type> <Value>` or `itldims get <Value> <Server Type>` or `itldims get Physical vahan4bkp`  to get the following output:**
 ```
 key=/servers/Physical/10.246.40.139/NFS
@@ -248,7 +251,7 @@ NFSPartition Size=nas01_500
 NFSPartition Source=10.246.40.207_/FPG1/VFS1/vahan4bkp/vahan4
 ----------------------------
 ```
-
+    
 **8. `itldims get <Attribute> <Server IP>`  or `itldims get <Server IP> <Attribute>`  or `itldims get Environment 10.249.221.22`   to get the following output:**
 ```
 key=/servers/VM/10.249.221.22/Environment
@@ -256,6 +259,7 @@ Production
 ----------------------------
 ```
 
+          
 **9. `itldims get <Value> <Server IP>`  or `itldims get <Server IP> <Value>`  or `itldims get 10.249.221.1 10.249.221.22`   to get the following output:**
 ```
 key=/servers/VM/10.249.221.22/Gateway
@@ -263,6 +267,7 @@ key=/servers/VM/10.249.221.22/Gateway
 ----------------------------
 ```
 
+         
 **10. `itldims get <Server IP> <Server Type>` or `itldims get 10.249.221.22 VM`   to get the following output:**
 ```
 key=/servers/VM/10.249.221.22/Gateway
