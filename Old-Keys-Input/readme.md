@@ -17,4 +17,3 @@ These can be understood in detail through the [list of commands](https://github.
   ```
   Value: 32GB
   ```
-
