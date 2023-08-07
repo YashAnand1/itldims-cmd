@@ -56,6 +56,7 @@ func fetchDataFromEtcdAPI() (map[string]string, error) {
 	if err != nil {
 		return nil, fmt.Errorf("failed to connect to the etcd API: %v", err)
 	}
+	
 	defer response.Body.Close()
 
 	if response.StatusCode != http.StatusOK {
@@ -76,6 +77,7 @@ func parseKeyValuePairs(data string) map[string]string {
 	for i := 0; i < len(lines)-1; i += 2 {
 		result[strings.TrimSpace(lines[i])] = strings.TrimSpace(lines[i+1])
 	}
+	
 	return result
 }
 
