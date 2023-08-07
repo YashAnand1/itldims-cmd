@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"io/ioutil"
+	"io"
 	"log"
 	"net/http"
 
@@ -49,7 +49,7 @@ var (
 			defer response.Body.Close()
 
 			if response.StatusCode == http.StatusOK {
-				body, err := ioutil.ReadAll(response.Body)
+				body, err := io.ReadAll(response.Body)
 				if err != nil {
 					log.Fatalf("Failed to read response body: %v", err)
 				}
