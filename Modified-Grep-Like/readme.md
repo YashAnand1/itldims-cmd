@@ -6,8 +6,8 @@
 - Outputs of Command Combinations
 
 # Workings of the code
-- This code utilises a modifed version of  [main.go](https://github.com/yash-anand-fosteringlinux/Commands-and-Outputs/blob/main/Old-Keys-Input/main.go), where the etcd API url `localhost:8181/servers/` is used to display all the key-values. 
-- The key is in the format of `/servers/<server-Type>/<server-IP>/<Attribute>`. When `itldims get <input 1> <input 2>` is used, the user is allowed to search for any possible combinations of key components.
+- This code utilises a modifed version of  [main.go](https://github.com/yash-anand-fosteringlinux/Commands-and-Outputs/blob/main/Old-Keys-Input/main.go), where the etcd API url `localhost:8181/servers/` is connected with for displaying all the key-values.
+- `itldims` command is used to check connection with the API Server and `itldims get <input 1> <input 2>` subcommand is used to search user arguments from the API Server. The method of placing user arguments into `localhost:8181/servers/<ServerType/ServerIP/Attribtue` is not used and grep like search is run through the displayed content of `localhost:8181/servers`.
 - If needed, user can search with a single key-component or value using `itldims get <input 1>`. The 2 inputs entered by the user are then searched for and the  key-values not needed are filtered out from the data in `localhost:8181/servers/`.
 
 # Command Combinations
