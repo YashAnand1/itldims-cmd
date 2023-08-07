@@ -15,7 +15,7 @@
 # Command Combinations
 | S. No. | Command Combination               | Output Description                                      | Use-Case |
 |-------|-----------------------------------|---------------------------------------------------------|------------|
-| 1| `itldims get server`              | Displays attribute values of all Servers              | Helps user see all the running servers with their data |
+| 1| `itldims get server`              | Displays attribute values of all Servers              | Helps user see all the running servers and their data |
 | 2| `itldims get <Attribute>`         | Displays all Servers containing a specific Attribute   | Helps User find the RAMs of all servers |
 | 3| `itldims get <Server Type>`       | Displays all Attribute values of a specific Server Type | User can find values of all attributes running on all VMs |
 | 4| `itldims get <Server IP>`         | Displays all Attribute values of a specific Server IP  | User can find values of all attributes running on '10.249.221.22' |
