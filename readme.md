@@ -1,5 +1,7 @@
 # Data Retrieval Commands
 
+
+## Methods
 There are 2 ways of retrieving the data. These are:  
 - The modified grep like method. 
 - The old method of inputting components of keys. 
