@@ -32,36 +32,87 @@
 
 
 ## Outputs of Command Combinations
-`itldims get <input 1> <input 2>` can be used in the following ways:
-- `itldims get <server-IP> <server-Type>` or `itldims get 10.249.221.22 VM ` is giving the following output:
-  ```
-  Key: /servers/VM/10.249.221.22/Gateway
-  Value: 10.249.221.1
+`itldims get` can be used in the following ways:  
 
-  Key: /servers/VM/10.249.221.22/LVM
-  Value: home
+1. `itldims get server`to get the following output:
+```
+key=/servers/Physical/10.246.40.139/CPU
+8
+----------------------------
 
-  Key: /servers/VM/10.249.221.22/CPU
-  Value: 8
+key=/servers/Physical/10.246.40.139/Environment
+Production
+----------------------------
 
-  Key: /servers/VM/10.249.221.22/API
-  Value: CheckpostWebService
+key=/servers/Physical/10.246.40.139/NFS
+NFSPartition name=/vahanapp
+NFSPartition Size=vahanapp_2500
+NFSPartition Source=10.246.40.207_/FPG1/VFS1/vahanapp01/vahanapp
+NFSPartition name=/nas01
+NFSPartition Size=nas01_500
+NFSPartition Source=10.246.40.207_/FPG1/VFS1/vahan4bkp/vahan4
+----------------------------
 
-  Key: /servers/VM/10.249.221.22/PV
-  Value: PV Name=/dev/sda3
+key=/servers/Physical/10.246.40.139/VG
+/dev/mapper/vg0-lv0:1000GB
+----------------------------
 
-  Key: /servers/VM/10.249.221.22/External_Disk
-  Value: sdb:500GB
+key=/servers/VM/10.249.221.21/API
+CheckpostWebService
+----------------------------
 
-  Key: /servers/VM/10.249.221.22/Internal_Disk
-  Value: sda:105GB
+key=/servers/VM/10.249.221.21/Application
+checkpost
+----------------------------
 
-  Key: /servers/VM/10.249.221.22/RAM
-  Value: 32GB
+key=/servers/VM/10.249.221.21/CPU
+8
+----------------------------
 
-  Key: /servers/VM/10.249.221.22/Netmask
-  Value: 255.255.255.128
-  ```
+key=/servers/VM/10.249.221.21/External_Partition
+u01:322GB
+----------------------------
+
+key=/servers/VM/10.249.221.21/Gateway
+10.249.221.1
+----------------------------
+
+key=/servers/VM/10.249.221.21/RAM
+32GB
+----------------------------
+
+key=/servers/Physical/10.246.40.139/LVM
+home
+opt
+root
+swap
+tmp
+usr
+var
+var_crash
+lv0
+----------------------------
+
+key=/servers/Physical/10.246.40.139/OS
+RHEL 7.9
+----------------------------
+
+key=/servers/Physical/10.246.40.142/CPU
+8
+----------------------------
+
+key=/servers/Physical/10.246.40.142/Internal_Disk
+sda:500GB
+----------------------------
+
+key=/servers/Physical/10.246.40.142/OS
+RHEL 7.9
+----------------------------
+
+key=/servers/Physical/10.246.40.142/RAM
+32GB
+----------------------------
+```
 
 - `itldims get <server-IP> <Value>`or `itldims get 10.246.40.142 vahan` is giving the following output:
   ```
