@@ -28,10 +28,10 @@ var (
 		},
 	}
 
-	get = &cobra.Command{
+	get = &cobra.Command{ // variable get as a new command
 		Use:   "get",
-		Short: "Get keys with specific inputs from etcd API",
-		Args:  cobra.RangeArgs(1, 2),
+		Short: "Search Attributes & Values from etcd API",
+		Args:  cobra.RangeArgs(1, 2), //The number of arguments possible in the command
 		Run: func(cmd *cobra.Command, args []string) {
 			data, err := fetchDataFromEtcdAPI()
 			if err != nil {
@@ -51,7 +51,13 @@ var (
 				if !strings.Contains(key, "data") &&
 					(strings.Contains(key, args[0]) || strings.Contains(value, args[0])) &&
 					(strings.Contains(key, args[1]) || strings.Contains(value, args[1])) {
-					fmt.Printf("key=%s\nvalue=%s\n\n", key, value)
+					fmt.Printf("key=%s\n", key)
+
+					lines := strings.Split(value, "\n")
+					for _, line := range lines {
+						fmt.Println(line)
+					}
+					fmt.Println()
 				}
 			}
 		},
@@ -80,9 +86,21 @@ func fetchDataFromEtcdAPI() (map[string]string, error) {
 
 func parseKeyValuePairs(data string) map[string]string {
 	result := make(map[string]string)
-	lines := strings.Split(data, "\n")
-	for i := 0; i < len(lines)-1; i += 2 {
-		result[strings.TrimSpace(lines[i])] = strings.TrimSpace(lines[i+1])
+
+	keyValuePairs := strings.Split(data, "Key:")
+
+	for _, kv := range keyValuePairs {
+		kv = strings.TrimSpace(kv)
+		if len(kv) == 0 {
+			continue
+		}
+
+		lines := strings.Split(kv, "Value:")
+		if len(lines) == 2 {
+			key := strings.TrimSpace(lines[0])
+			value := strings.TrimSpace(lines[1])
+			result[key] = value
+		}
 	}
 
 	return result
