@@ -38,9 +38,8 @@ var (
 				log.Fatalf("Failed to fetch data from the etcd API: %v", err)
 			}
 
-			// Check if only one argument is provided and append "server" as the second argument
 			if len(args) == 1 {
-				args = append(args, "server")
+				args = append(args, "servers")
 			}
 
 			for key, value := range data {
@@ -82,7 +81,7 @@ func fetchDataFromEtcdAPI() (map[string]string, error) {
 func parseKeyValuePairs(data string) map[string]string {
 	result := make(map[string]string)
 	lines := strings.Split(data, "\n")
-	for i := 0; i < len(lines)-1; i += 1 {
+	for i := 0; i < len(lines)-1; i += 2 {
 		result[strings.TrimSpace(lines[i])] = strings.TrimSpace(lines[i+1])
 	}
 
