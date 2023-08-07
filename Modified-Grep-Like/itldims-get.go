@@ -31,7 +31,7 @@ var (
 	get = &cobra.Command{
 		Use:   "get",
 		Short: "Get keys with specific inputs from etcd API",
-		Args:  cobra.ExactArgs(2),
+		Args:  cobra.RangeArgs(1, 2),
 		Run: func(cmd *cobra.Command, args []string) {
 			data, err := fetchDataFromEtcdAPI()
 			if err != nil {
@@ -39,12 +39,21 @@ var (
 			}
 
 			for key, value := range data {
-				if strings.Contains(key, "/data") {
+				if strings.Contains(key, "data") && strings.Contains(value, "{") && strings.Contains(value, "}") {
 					continue
 				}
 
-				if strings.Contains(value, args[0]) && strings.Contains(key, args[1]) || strings.Contains(key, args[0]) && strings.Contains(value, args[1]) {
-					fmt.Printf("%s\n%s\n\n", key, value)
+				if len(args) == 1 {
+					if !strings.Contains(key, "data") && !strings.Contains(value, "{") && !strings.Contains(value, "}") &&
+						(strings.Contains(value, args[0]) || strings.Contains(key, args[0])) {
+						fmt.Printf("%s\n%s\n\n", key, value)
+					}
+				} else if len(args) == 2 {
+					if !strings.Contains(key, "data") && !strings.Contains(value, "{") && !strings.Contains(value, "}") &&
+						(strings.Contains(key, args[0]) || strings.Contains(value, args[0])) &&
+						(strings.Contains(key, args[1]) || strings.Contains(value, args[1])) {
+						fmt.Printf("%s\n%s\n\n", key, value)
+					}
 				}
 			}
 		},
@@ -56,7 +65,7 @@ func fetchDataFromEtcdAPI() (map[string]string, error) {
 	if err != nil {
 		return nil, fmt.Errorf("failed to connect to the etcd API: %v", err)
 	}
-	
+
 	defer response.Body.Close()
 
 	if response.StatusCode != http.StatusOK {
@@ -77,7 +86,7 @@ func parseKeyValuePairs(data string) map[string]string {
 	for i := 0; i < len(lines)-1; i += 2 {
 		result[strings.TrimSpace(lines[i])] = strings.TrimSpace(lines[i+1])
 	}
-	
+
 	return result
 }
 
