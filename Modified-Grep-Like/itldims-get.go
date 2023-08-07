@@ -47,8 +47,9 @@ var (
 				if len(args) == 1 {
 					if !strings.Contains(key, "data") &&
 						(strings.Contains(value, args[0]) || strings.Contains(key, args[0])) {
-						fmt.Printf("%s\n\n", key) || fmt.Printf("%s\n\n", value)
+						fmt.Printf("%s\n", key, value)
 					}
+
 				} else if len(args) == 2 {
 					if !strings.Contains(key, "data") &&
 						(strings.Contains(key, args[0]) || strings.Contains(value, args[0])) &&
@@ -84,7 +85,7 @@ func fetchDataFromEtcdAPI() (map[string]string, error) {
 func parseKeyValuePairs(data string) map[string]string {
 	result := make(map[string]string)
 	lines := strings.Split(data, "\n")
-	for i := 0; i < len(lines)-1; i += 2 {
+	for i := 0; i < len(lines)-1; i += 1 {
 		result[strings.TrimSpace(lines[i])] = strings.TrimSpace(lines[i+1])
 	}
 
