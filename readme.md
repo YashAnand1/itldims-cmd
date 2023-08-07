@@ -1,8 +1,8 @@
 # Data Retrieval Commands
 
 There are 2 ways of retrieving the data. These are:  
-- The modified grep like method. | Link
-- The old method of inputting components of keys. | Link
+- The modified grep like method. 
+- The old method of inputting components of keys. 
 
 ## Modified Grep Like Method | [LINK](https://github.com/yash-anand-fosteringlinux/Commands-and-Outputs/tree/main/Modified-Grep-Like)
 - This method utilises the `itldims get <input 1> <input 2>` command. 
