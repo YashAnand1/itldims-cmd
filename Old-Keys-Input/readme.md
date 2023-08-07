@@ -1,4 +1,4 @@
-# Filling Keys Method
+# Filling Keys Method (WORK IN PROGRESS/INCOMPLETE)
 
 ## Overview
 - This code utilises an [older version](https://github.com/yash-anand-fosteringlinux/Commands-and-Outputs/blob/main/Old-Keys-Input/main.go) of the [main.go]([https://github.com/yash-anand-fosteringlinux/Commands-and-Outputs/blob/main/Old-Keys-Input/main.go](https://github.com/Keen-And-Able/etcd-inventory/blob/sk/main.go)), where the etcd API url `localhost:8181/servers/<server-Type>/<server-IP>/<Attribute>` is used to display all the key-values. 
