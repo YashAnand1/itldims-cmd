@@ -38,24 +38,21 @@ var (
 				log.Fatalf("Failed to fetch data from the etcd API: %v", err)
 			}
 
+			// Check if only one argument is provided and append "server" as the second argument
+			if len(args) == 1 {
+				args = append(args, "server")
+			}
+
 			for key, value := range data {
 				if strings.Contains(key, "{") || strings.Contains(key, "}") ||
 					strings.Contains(value, "{") || strings.Contains(value, "}") {
 					continue
 				}
 
-				if len(args) == 1 {
-					if !strings.Contains(key, "data") &&
-						(strings.Contains(value, args[0]) || strings.Contains(key, args[0])) {
-						fmt.Printf("%s\n", key, value)
-					}
-
-				} else if len(args) == 2 {
-					if !strings.Contains(key, "data") &&
-						(strings.Contains(key, args[0]) || strings.Contains(value, args[0])) &&
-						(strings.Contains(key, args[1]) || strings.Contains(value, args[1])) {
-						fmt.Printf("%s\n%s\n\n", key, value)
-					}
+				if !strings.Contains(key, "data") &&
+					(strings.Contains(key, args[0]) || strings.Contains(value, args[0])) &&
+					(strings.Contains(key, args[1]) || strings.Contains(value, args[1])) {
+					fmt.Printf("key=%s\nvalue=%s\n\n", key, value)
 				}
 			}
 		},
