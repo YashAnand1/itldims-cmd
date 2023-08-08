@@ -28,10 +28,10 @@ var (
 		},
 	}
 
-	get = &cobra.Command{ // variable get as a new command
+	get = &cobra.Command{ 
 		Use:   "get",
 		Short: "Search Attributes & Values from etcd API",
-		Args:  cobra.RangeArgs(1, 2), //The number of arguments possible in the command
+		Args:  cobra.RangeArgs(1, 2),
 		Run: func(cmd *cobra.Command, args []string) {
 			data, err := fetchDataFromEtcdAPI()
 			if err != nil {
