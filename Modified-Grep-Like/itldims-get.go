@@ -28,10 +28,26 @@ var (
 		},
 	}
 
-	get = &cobra.Command{ 
+	get = &cobra.Command{
 		Use:   "get",
 		Short: "Search Attributes & Values from etcd API",
-		Args:  cobra.RangeArgs(1, 2),
+		Long: `Data retrieval can be made possible 'itldims get <input1> <input2>' or 'itldims get <input1>'.
+
+The possible command combinations that can be used are:
+- itldims get <Servers> | Displays attribute values of all Servers
+- itldims get <Value> | Displays all Servers containing a specific Attribute value
+- itldims get <Attribute> | Displays Displays all Servers containing a specific Attribute
+- itldims get <Server IP> | Displays all Attribute values of a specific Server IP
+- itldims get <Server Type> <Attribute> | Displays specific Attribute values of a specific Server Type
+- itldims get <Server Type> <Value> | Displays all Server Types containing a specific value
+- itldims get <Value> <Server Type> | Displays all Server Types containing a specific value
+- itldims get <Attribute> <Server IP> | Displays specific Attribute values of a specific Server IP
+- itldims get <Server IP> <Attribute> | Displays specific Attribute values of a specific Server IP
+- itldims get <Server IP> <Value> | Displays all Server IPs containing a specific value
+- itldims get <Value> <Server IP> | Displays all Server IPs containing a specific value
+- itldims get <Server IP> <Server Type> | Displays all Attribute values of a specific Server
+		`,
+		Args: cobra.RangeArgs(1, 2),
 		Run: func(cmd *cobra.Command, args []string) {
 			data, err := fetchDataFromEtcdAPI()
 			if err != nil {
@@ -51,7 +67,6 @@ var (
 				if !strings.Contains(key, "data") &&
 					(strings.Contains(key, args[0]) || strings.Contains(value, args[0])) &&
 					(strings.Contains(key, args[1]) || strings.Contains(value, args[1])) {
-					fmt.Printf("key=%s\n", key)
 
 					lines := strings.Split(value, "\n")
 					for _, line := range lines {
