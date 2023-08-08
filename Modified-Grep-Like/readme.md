@@ -304,5 +304,7 @@ key=/servers/VM/10.249.221.22/RAM
 ```
 
 # Requested Features
-- Create `--only` flag to display only the key  | `itldims get --only servers`
-- Create `--whole` flag to search for exact argument/s to filter out information that does not completely match | `itldims get --whole 8`
+- Create `--only` flag to display only the key
+  Command:`itldims get --only servers`
+- Create `--whole` flag to search for exact argument/s to filter out information that does not completely match     
+  Command: `itldims get --whole 8`
