@@ -10,7 +10,7 @@
 - Data from the API Server is fetched and then the parsing of the data is done before the user inputs their argument/s to process the data from the API Server.
 - `itldims` command is used to check connection with the API Server and `itldims get <input 1> <input 2>` subcommand is used to search user arguments from the API Server.
 -  The method of placing user arguments into `localhost:8181/servers/<ServerType/ServerIP/Attribtue` is not used and grep like search is run through the displayed content of `localhost:8181/servers`.
-- If needed, user can search with a single key-component or value using `itldims get <input 1>`. The 2 inputs entered by the user are then searched for and the key-values not needed are filtered out from the data in `localhost:8181/servers/`.
+- If needed, user can search with a single key-component or value using `itldims get <input 1>`. The input entered by the user are then searched for and the key-values not needed are filtered out from the data in `localhost:8181/servers/`.
 
 # Command Combinations
 | S. No. | Command Combination               | Output Description                                      | Use-Case |
