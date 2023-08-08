@@ -4,6 +4,7 @@
 - Workings of the code
 - Command Combinations
 - Outputs of Command Combinations
+- Requested features
 
 # Workings of the code
 - This code utilises a modifed version of  [main.go](https://github.com/yash-anand-fosteringlinux/Commands-and-Outputs/blob/main/Old-Keys-Input/main.go), where the etcd API url `localhost:8181/servers/` is connected with for displaying all the key-values.
