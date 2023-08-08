@@ -11,6 +11,8 @@ import (
 )
 
 var (
+	onlyKeys bool
+
 	itldims = &cobra.Command{
 		Use:   "itldims",
 		Short: "Interact with the etcd API",
@@ -67,6 +69,7 @@ The possible command combinations that can be used are:
 				if !strings.Contains(key, "data") &&
 					(strings.Contains(key, args[0]) || strings.Contains(value, args[0])) &&
 					(strings.Contains(key, args[1]) || strings.Contains(value, args[1])) {
+					fmt.Printf("key=%s\n", key)
 
 					lines := strings.Split(value, "\n")
 					for _, line := range lines {
@@ -122,6 +125,7 @@ func parseKeyValuePairs(data string) map[string]string {
 }
 
 func init() {
+	get.PersistentFlags().BoolVar(&onlyKeys, "only", false, "Display only the keys without their values")
 	itldims.AddCommand(get)
 }
 
