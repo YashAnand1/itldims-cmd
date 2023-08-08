@@ -32,7 +32,7 @@
 
 
 ## Outputs of Command Combinations
-The possible combinations along with their outputs for the `itldims get` command have been provided below. For any output which is too lengthy, `. . . . .` has been used to signify that the mentioned output gives complete data but is being shown here completely.
+The possible combinations along with their outputs for the `itldims get` command have been provided below. For any output which is too lengthy, `. . . . .` has been used at the end to signify that the mentioned output gives complete data but is being shown here completely.
 
    
 **1. `itldims get server`to get the following output:**
