@@ -32,7 +32,6 @@ Command combinations that can be utilised:
 			log.Fatalf("Failed to fetch data from the etcd API: %v", err)
 		}
 
-		// COMMANDS MENTIONING ONLY KEY COMPONENTS - NO COMBINATIONS
 		if len(args) == 1 && (args[0] == "servers" || args[0] == "types" || args[0] == "attributes") {
 			IPs := make(map[string]string)
 			STs := make(map[string]string)
@@ -73,7 +72,8 @@ Command combinations that can be utilised:
 			return
 		}
 
-		// FOR COMBINATION COMMANDS FOR VALUES - itldims get [IP/TYPE/ATTRIBUTE] [IP/TYPE/ATTRIBUTE/VALUE]
+		// For itldims get [IP/TYPE/ATTRIBUTE/VALUE] [IP/TYPE/ATTRIBUTE/VALUE]
+		// IP ATTRIBUTE, IP TYPE, TYPE ATTRIBUTE the kind
 		for key, value := range parseKeyValuePairs(data) {
 			if strings.Contains(key, "{") || strings.Contains(key, "}") || strings.Contains(key, "data") ||
 				strings.Contains(value, "{") || strings.Contains(value, "}") {
