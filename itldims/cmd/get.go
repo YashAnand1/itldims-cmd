@@ -23,7 +23,7 @@ Command combinations that can be utilised:
 - itldims get <Server IP>              | Displays all Attribute values of a specific Server IP | Working
 - itldims get <Server Type>            | Displays all Attribute values of a specific Server Type | Working
 - itldims get <Attribute>              | Display Servers with a specific Attribute              | Working
-- itldims get <Server Type> <Attribute> | Display specific Attribute values of a Server Type     | Working
+- itldims get <Server IP> <Attribute> | Display specific Attribute values of a Server Type     | Working
 	`,
 	Args: cobra.RangeArgs(1, 2),
 	Run: func(cmd *cobra.Command, args []string) {
