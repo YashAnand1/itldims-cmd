@@ -32,6 +32,7 @@ Command combinations that can be utilised:
 			log.Fatalf("Failed to fetch data from the etcd API: %v", err)
 		}
 
+		// COMMANDS MENTIONING ONLY KEY COMPONENTS - NO COMBINATIONS
 		if len(args) == 1 && (args[0] == "servers" || args[0] == "types" || args[0] == "attributes") {
 			IPs := make(map[string]string)
 			STs := make(map[string]string)
@@ -72,7 +73,7 @@ Command combinations that can be utilised:
 			return
 		}
 
-		// For itldims get [IP/TYPE/ATTRIBUTE/VALUE] [IP/TYPE/ATTRIBUTE/VALUE]
+		// FOR COMBINATION COMMANDS FOR VALUES - itldims get [IP/TYPE/ATTRIBUTE] [IP/TYPE/ATTRIBUTE/VALUE]
 		for key, value := range parseKeyValuePairs(data) {
 			if strings.Contains(key, "{") || strings.Contains(key, "}") || strings.Contains(key, "data") ||
 				strings.Contains(value, "{") || strings.Contains(value, "}") {
@@ -88,9 +89,14 @@ Command combinations that can be utilised:
 
 				splitKey := strings.Split(key, "/")
 				serverAtr := splitKey[4]
+				serverIP := splitKey[3]
 				ATs[serverAtr] = serverAtr
 
-				fmt.Printf("%s:%s\n----------------------------\n", serverAtr, value)
+				if len(args) == 1 || strings.Contains(args[0], ".") {
+					fmt.Printf("%s:%s\n----------------------------\n", serverAtr, value)
+				} else {
+					fmt.Printf("Server IP: %s\n%s:%s\n----------------------------\n", serverIP, serverAtr, value)
+				}
 			}
 		}
 	},
