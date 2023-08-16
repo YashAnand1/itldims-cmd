@@ -86,7 +86,6 @@ Command combinations that can be utilised:
 
 				ATs := make(map[string]string)
 
-				// Split the key to extract the attribute
 				splitKey := strings.Split(key, "/")
 				serverAtr := splitKey[4]
 				ATs[serverAtr] = serverAtr
@@ -96,8 +95,6 @@ Command combinations that can be utilised:
 		}
 	},
 }
-
-// Other functions (fetchDataFromAPI and parseKeyValuePairs) remain unchanged
 
 func fetchDataFromAPI() (string, error) {
 	response, err := http.Get("http://localhost:8181/servers/")
