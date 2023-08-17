@@ -194,5 +194,3 @@ Server IP: 10.246.40.139
 RAM:32GB
 ---------------------------
 ```
-- Create `--exact` flag to search for exact argument/s to filter out information that does not completely match
-- - **Command:** `itldims get --exact 8`
