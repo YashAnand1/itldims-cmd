@@ -1,5 +1,10 @@
 # Searching Method
 
+## Setup
+- Clone the [itldims directory](https://github.com/yash-anand-fosteringlinux/itldims-cmd/tree/main/itldims)
+- In the API directory, 'go run' [main.go](https://github.com/yash-anand-fosteringlinux/itldims-cmd/blob/main/itldims/main.go) for connecting with the API
+- Optional: Have etcdctl installed for future use 
+
 ## Topics
 - Workings of the code
 - Command Combinations
