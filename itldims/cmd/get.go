@@ -11,7 +11,7 @@ import (
 	"github.com/spf13/cobra"
 )
 
-// For itldims get [IP/TYPE/ATTRIBUTE/VALUE] [IP/TYPE/ATTRIBUTE/VALUE]
+// For itldims get [IP/TYPE/ATTRIBUTE] [IP/TYPE/ATTRIBUTE/VALUE]
 // IP ATTRIBUTE, IP TYPE, TYPE ATTRIBUTE the kind
 var get = &cobra.Command{
 	Use:   "get",
