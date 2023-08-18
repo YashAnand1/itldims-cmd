@@ -1,84 +1,86 @@
-/*
-Copyright © 2023 NAME HERE <EMAIL ADDRESS>
-*/
 package cmd
 
 import (
 	"fmt"
-	"log"
 	"strings"
 
-	"github.com/spf13/cobra"
+	"github.com/spf13/cobra" // Import the Cobra library for CLI functionality
 )
 
+// FOR itldims get servers - LIST ALL SERVERS
 var servers = &cobra.Command{
 	Use:   "servers",
-	Short: "Displays all the running Servers with their Server IPs",
+	Short: "all servers displayed",
+	Long:  "all servers displayed in a listed form",
 	Run: func(cmd *cobra.Command, args []string) {
-		data, err := fetchDataFromAPI()
+		data, err := fetchDataFromAPI() // Fetch data from the API
 		if err != nil {
-			log.Fatalf("Failed to fetch data from the etcd API: %v", err)
+			fmt.Printf("Unable to connect due to %s", err)
 		}
 
+		// Create a map to store server IPs UNIQUELY
 		IPs := make(map[string]string)
 
 		for key := range parseKeyValuePairs(data) {
 			splitKey := strings.Split(key, "/")
-			serverIP := splitKey[3]
+			serverIP := splitKey[3] // Extract the server IP from the split key
 			IPs[serverIP] = serverIP
 		}
 
-		for serverIP := range IPs {
-			fmt.Printf("%s\n", serverIP)
-			fmt.Printf("----------------------------\n")
+		for serverIP := range IPs { // Go through stored server IPs
+			fmt.Printf("%s\n----------------------------\n", serverIP)
 		}
 	},
 }
 
-var types = &cobra.Command{
+// FOR itldims get types - LIST ALL SERVERTYPES
+var Types = &cobra.Command{
 	Use:   "types",
-	Short: "Displays all Attribute values of a specific Server Type",
+	Short: "For finding running server types",
+	Long:  "For finding the running server types from all the servers",
 	Run: func(cmd *cobra.Command, args []string) {
 		data, err := fetchDataFromAPI()
 		if err != nil {
-			log.Fatalf("Failed to fetch data from the etcd API: %v", err)
+			fmt.Printf("Could not connect to API %v", err)
 		}
 
-		STs := make(map[string]string)
+		Types := make(map[string]string) // for uniquely storing server types
 
+		// Loop through keys obtained from parsing data
 		for key := range parseKeyValuePairs(data) {
 			splitKey := strings.Split(key, "/")
 			serverType := splitKey[2]
-			STs[serverType] = serverType
+			Types[serverType] = serverType
 		}
 
-		for serverType := range STs {
-			fmt.Printf("%s\n", serverType)
-			fmt.Printf("----------------------------\n")
+		for serverType := range Types {
+			fmt.Printf("%s\n----------------------------\n", serverType)
 		}
 	},
 }
 
+// FOR itldims get attributes - LISTS ATTRIBUTES
 var attributes = &cobra.Command{
 	Use:   "attributes",
-	Short: "Display Servers with a specific Attribute",
+	Short: "Displays all attributes",
+	Long:  "Displays all attributes that are running",
 	Run: func(cmd *cobra.Command, args []string) {
 		data, err := fetchDataFromAPI()
 		if err != nil {
-			log.Fatalf("Failed to fetch data from the etcd API: %v", err)
+			fmt.Printf("Could not connect to the API. Error: %v", err)
 		}
 
-		ATs := make(map[string]string)
+		ATs := make(map[string]string) // map to uniquely store attributes
 
 		for key := range parseKeyValuePairs(data) {
 			splitKey := strings.Split(key, "/")
-			serverAtr := splitKey[4]
-			ATs[serverAtr] = serverAtr
+			attribute := splitKey[4]
+			ATs[attribute] = attribute // Store the attribute in the map
 		}
 
-		for serverAtr := range ATs {
-			fmt.Printf("%s\n", serverAtr)
-			fmt.Printf("----------------------------\n")
+		for attribute := range ATs {
+			fmt.Printf("%s\n----------------------------\n", attribute)
 		}
+
 	},
 }
