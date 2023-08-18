@@ -11,7 +11,7 @@ There are 2 ways of retrieving the data. These are:
 - Here the user enters any 2 arguments that are to be searched for. 
 - Then, the fetched data which matches the arguments is displayed from the etcd API of `localhost:8181/servers`.
 
-## Arguments To Keys Method (ISSUE) | [/Old-Keys-Input](https://github.com/yash-anand-fosteringlinux/Commands-and-Outputs/tree/main/Old-Keys-Input)
+## Arguments To Keys Method (NOTWORKING) | [/Old-Keys-Input](https://github.com/yash-anand-fosteringlinux/Commands-and-Outputs/tree/main/Old-Keys-Input)
 - This method utilises the `itldims get --server <Server IP> <Attribute>` command at the moment. More commands are yet to be created as per [this](https://github.com/yash-anand-fosteringlinux/Commands-and-Outputs/blob/main/Old-Keys-Input/ListOfCommands.md) command list. 
 - In this code, the API is connected with `localhost:8181/servers/<type>/<IP>/<attribute>`.
 - User enters the Server IP and the attribute he wishes to learn about and the value is shown.
