@@ -1,6 +1,3 @@
-/*
-Copyright © 2023 NAME HERE <EMAIL ADDRESS>
-*/
 package cmd
 
 import (
@@ -19,7 +16,7 @@ var (
 		Run: func(cmd *cobra.Command, args []string) { // Extracted function
 			response, err := http.Get("http://localhost:8181/servers/")
 			if err != nil {
-				log.Fatalf("Failed to connect to the etcd API.")
+				fmt.Printf("Failed to connect to the etcd API.")
 			}
 			defer response.Body.Close()
 
